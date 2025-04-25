@@ -11,7 +11,7 @@
 <div class="login">
     <form action="connexion.php" method="post">
         <h2 class="h2-connextion">Connextion</h2>
-        <label for="username">Nom d'utilisateur:</label>
+        <label for="username">Nom d'utilisateur ou email:</label>
         <input type="text" id="username" name="username" required class="input">
 
         <label for="password">Mot de passe:</label>
@@ -19,7 +19,7 @@
 
         <input type="submit" value="Se connecter" class="button-connextion">
     </form>
-    <p>Pas encore de compte ? <a href="inscription.php">Inscrivez-vous ici</a></p>
+    <p class="info-longin-register">Pas encore de compte ? <a class="info-longin-register-link" href="register.php">Inscrivez-vous ici </a></p>
 
 </div>
 
