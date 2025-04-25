@@ -27,7 +27,7 @@ try {
 echo "<h1>Tableau des livres trié</h1>";
 try {
 
-    $stmt = $pdo->query("SELECT * FROM book WHERE date_publication > '2000-01-01'"); // filtre de la requete sql pour avoir les bon resultat
+    $stmt = $pdo->query("SELECT * FROM book WHERE date_publication >= '2000-01-01' ORDER BY title asc "); // filtre de la requete sql pour avoir les bon resultat
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     echo "<table border='1'>";
