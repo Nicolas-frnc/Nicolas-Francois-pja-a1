@@ -3,8 +3,8 @@
 if(isset($_POST["submit"])){
 
     // recupere les données du formulaire
-    $uid = $_POST["uid"];
-    $pwd = $_POST["pwd"];
+    $uid = $_POST["username"];
+    $pwd = $_POST["password"];
 
     // https://youtu.be/BaEm2Qv14oU?list=LL&t=1036
 

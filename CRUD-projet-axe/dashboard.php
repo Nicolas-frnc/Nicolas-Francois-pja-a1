@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -160,6 +164,14 @@
                 <h3>React Rendecroxia</h3>
                 <p>Elijah Brie</p>
             </div>
+
+            <?php
+            if (isset($_SESSION["useruid"])) {
+                echo $_SESSION["useruid"];
+            } else {
+                echo "Utilisateur non connecté.";
+            }
+            ?>
 
         </div>
     </main>
