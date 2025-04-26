@@ -29,6 +29,7 @@ class SignupContr extends signup {
         }
         if($this->uidTakenCheck() == false){
             header("location: ../register.php?error=useroremailtaken");
+            exit();
         }
 
         $this->setUser($this->uid, $this->pwd, $this->email);
@@ -81,10 +82,10 @@ class SignupContr extends signup {
     private function uidTakenCheck(){
         $result;
         if (!$this->checkUser($this->uid, $this->email)) {
-            $result = true;
+            $result = false;
         }
         else{
-            $result = false;
+            $result = true;
         }
         return $result;
     }
