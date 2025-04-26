@@ -7,6 +7,8 @@ class Dbh {
             $username = "root";
             $password = "root";
             $dbh = new PDO('mysql:host=localhost;dbname=musicard', $username, $password );
+            return $dbh;
+
 
         }
         catch (PDOException $e) { // https://youtu.be/BaEm2Qv14oU?list=LL&t=1608

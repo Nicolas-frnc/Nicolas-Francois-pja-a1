@@ -9,7 +9,7 @@
 <body>
 
 <div class="login">
-    <form action="connexion.php" method="post">
+    <form action="includes/signup.inc.php" method="post">
         <h2 class="h2-connextion">Inscription</h2>
 
 
@@ -26,7 +26,7 @@
         <label for="pwdrepeat">Répétez le mot de pass</label>
         <input type="password" id="pwdrepeat" name="pwdrepeat" required class="input">
 
-        <input type="submit" value="Se connecter" class="button-connextion">
+        <input type="submit" name="submit" value="Se connecter" class="button-connextion">
     </form>
     <p class="info-longin-register">Deja un compte ? <a class="info-longin-register-link" href="login.php">Connecte toi ici</a></p>
 
