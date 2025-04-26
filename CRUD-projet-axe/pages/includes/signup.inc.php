@@ -20,5 +20,5 @@ if(isset($_POST["submit"])){
     $signup->signupUser();
 
     // redirection
-    header("location: ../register.php");
+    header("location: ../register.php?compte=ok");
 }

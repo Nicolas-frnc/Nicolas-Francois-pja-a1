@@ -50,7 +50,7 @@ class SignupContr extends signup {
 
     private function invalidUid(){
         $result;
-        if (!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)) { // https://youtu.be/BaEm2Qv14oU?list=LL&t=1376
+        if (!preg_match("/^[a-zA-Z0-9]+$/", $this->uid)) { // https://youtu.be/BaEm2Qv14oU?list=LL&t=1376
             $result = false;
         }
         else{

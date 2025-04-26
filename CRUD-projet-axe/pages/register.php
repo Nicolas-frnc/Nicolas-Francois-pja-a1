@@ -23,7 +23,7 @@
         <input type="password" id="pwd" name="pwd" required class="input">
 
 
-        <label for="pwdrepeat">Répétez le mot de pass</label>
+        <label for="pwdrepeat">Répétez le mot de passe:</label>
         <input type="password" id="pwdrepeat" name="pwdrepeat" required class="input">
 
         <input type="submit" name="submit" value="Se connecter" class="button-connextion">
