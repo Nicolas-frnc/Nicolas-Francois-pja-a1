@@ -24,7 +24,7 @@ try {
 }
 
 
-echo "<h1>Tableau des livres trié</h1>";
+echo "<h1>Tableau des livres trié apres 2000</h1>";
 try {
 
     $stmt = $pdo->query("SELECT * FROM book WHERE date_publication >= '2000-01-01' ORDER BY title asc "); // filtre de la requete sql pour avoir les bon resultat
