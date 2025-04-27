@@ -18,5 +18,5 @@ if(isset($_POST["submit"])){
     $login->loginUser();
 
     // redirection
-    header("location: ../login.php?compte=ok");
+    header("location: ../../dashboard.php?compte=ok");
 }

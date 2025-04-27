@@ -186,6 +186,8 @@ body {
 .info-longin-register-link{
     text-decoration: none;
     color: #cfcfcf;
-
-
+}
+.sans-mise-en-forme-liens a {
+    text-decoration: none;
+    color: #ffffff;
 }

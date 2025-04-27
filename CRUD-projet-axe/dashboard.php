@@ -41,9 +41,20 @@ session_start();
         <div class="sidebar-section">
             <h2>Mon compte</h2>
             <ul>
-                <li>✨ Mon compte</li>
-                <li>✨ Déconnextion</li>
-                <li>✨ Rareté</li>
+                <li>
+                    <?php
+                    if (isset($_SESSION["useruid"])) {
+
+                        echo "<li>✨ Mon compte (" . $_SESSION["useruid"] . ")</li>";
+
+
+                    } else {
+                        echo "non connecté.";
+                    }
+                    ?></li>
+                <li class="sans-mise-en-forme-liens"><a href="pages/includes/logout.inc.php">✨ Déconnexion </a></li>
+                <li class="sans-mise-en-forme-liens"><a href="pages/includes/logout.inc.php">✨ Aide </a></li>
+                <li>✨ Mes likes</li>
             </ul>
         </div>
     </nav>
@@ -51,7 +62,17 @@ session_start();
 
     <main class="main-content">
         <div class="greeting">
-            <h1>Bonjour Nicolas !</h1>
+            <?php
+            if (isset($_SESSION["useruid"])) {
+
+                echo "<h1>Bonjour " . $_SESSION["useruid"] . " !</h1>";
+
+
+            } else {
+                echo "non connecté.";
+            }
+            ?>
+            
             <p>Top picks for you, Updated daily.</p>
         </div>
 
@@ -165,13 +186,7 @@ session_start();
                 <p>Elijah Brie</p>
             </div>
 
-            <?php
-            if (isset($_SESSION["useruid"])) {
-                echo $_SESSION["useruid"];
-            } else {
-                echo "Utilisateur non connecté.";
-            }
-            ?>
+
 
         </div>
     </main>

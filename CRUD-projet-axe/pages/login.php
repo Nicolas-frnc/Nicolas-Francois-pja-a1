@@ -14,9 +14,10 @@ session_start();
 
 <?php
 if (isset($_SESSION["useruid"])) {
-    echo $_SESSION["useruid"];
+    echo "<p>connecter sous " . $_SESSION["useruid"] . "</p>";
+
 } else {
-    echo "Utilisateur non connecté.";
+    echo "non connecté.";
 }
 ?>
 
@@ -33,6 +34,7 @@ if (isset($_SESSION["useruid"])) {
         <input type="submit" name="submit" value="Se connecter" class="button-connextion">
     </form>
     <p class="info-longin-register">Pas encore de compte ? <a class="info-longin-register-link" href="register.php">Inscrivez-vous ici </a></p>
+    <p> <a href="includes/logout.inc.php">logout </a></p>
 
 </div>
 
