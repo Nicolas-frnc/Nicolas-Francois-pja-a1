@@ -100,34 +100,99 @@ $tickets = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
+
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
-
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Music App</title>
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 
+<?php
+session_start();
+?>
 <body>
 
+<div class="container">
+    <nav class="sidebar">
+        <div class="sidebar-section">
+            <h2>Musicard</h2>
+            <ul>
+                <li class="sidebar-section-hover">🎵 Découverte</li>
+                <li>🔍 Recherche</li>
+                <li>🎙️ Podcast</li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h2>Mon espace</h2>
+            <ul>
+                <li>🎶 Mes musiques</li>
+                <li>🖼️ Mes cover</li>
+                <li>📦 Mes booster</li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h2>Autre</h2>
+            <ul>
+                <li>✨ Boutique</li>
+                <li>✨ Marketplace</li>
+                <li>✨ Rareté</li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h2>Mon compte</h2>
+            <ul>
+                <li>
+                    <?php
+                    if (isset($_SESSION["useruid"])) {
 
-<form method="POST">
-    <p>Formulaire de création</p>
-
-    <label for="titre_support">Titre:</label>
-    <input type="text" name="titre_support" id="titre_support" placeholder="Titre">
+                        echo "<li>✨ Mon compte (" . $_SESSION["useruid"] . ")</li>";
 
 
-    <label for="email_support">Email:</label>
-    <input type="text" name="email_support" id="email_support" placeholder="Email">
+                    } else {
+                        echo "non connecté.";
+                    }
+                    ?></li>
+                <li class="sans-mise-en-forme-liens"><a href="pages/includes/logout.inc.php">✨ Déconnexion </a></li>
+                <li class="sans-mise-en-forme-liens"><a href="pages/includes/logout.inc.php">✨ Aide </a></li>
+                <li>✨ Mes likes</li>
+            </ul>
+        </div>
+    </nav>
 
-    <label for="report_support">Rapport:</label>
-    <input type="text" name="report_support" id="report_support">
 
-    <input type="submit" name="submit" value="Créer ticket">
-</form>
+    <main class="main-content">
+        <form method="POST">
+            <p class="titre-help-creation">Formulaire de création</p>
+
+            <label for="titre_support">Titre:</label>
+            <input type="text" name="titre_support" id="titre_support" class="input-help" placeholder="Titre">
+
+
+            <label for="email_support">Email:</label>
+            <input type="text" name="email_support" id="email_support" placeholder="Email" class="input-help">
+
+
+            <input type="text" name="report_support" id="report_support" class="input-text-report-help" class="input-help" placeholder="Decris ton problmeme ici...">
+
+            <p>Merci davoir soumis un ticket !</p>
+            <input type="submit" name="submit" value="Créer ticket" class="button-send-ticket">
+        </form>
+    </main>
+</div>
+
 
 </body>
 </html>
+
+
+
+
+
+

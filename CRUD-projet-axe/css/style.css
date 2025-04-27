@@ -191,3 +191,50 @@ body {
     text-decoration: none;
     color: #ffffff;
 }
+
+/* forms help */
+
+.main-content{
+    padding: 30px;
+}
+.titre-help-creation{
+
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.input-help{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #404040;
+    border-radius: 5px;
+    background: #282828;
+    color: #ffffff;
+
+}
+.input-text-report-help{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #404040;
+    border-radius: 5px;
+    background: #282828;
+    color: #ffffff;
+    height: 300px;
+    width: 100%;
+}
+
+.button-send-ticket {
+    margin-top: 20px;
+    padding: 10px;
+    background: #404040;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
