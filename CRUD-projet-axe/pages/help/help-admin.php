@@ -184,7 +184,7 @@ session_start();
             <?php
             foreach ($tickets as $key => $ticket) {
                 echo "<tr>";
-                echo "<td>" . $ticket["titre_support"] . "</td>";
+                echo "<td>" . $ticket["titre_support"] . "</td>"; // affiche le titre
                 echo "<td>" . $ticket["email_support"] . "</td>";
                 echo "<td>" . $ticket["report_support"] . "</td>";
                 echo "<td> <a href='?id_ticket=". $ticket["id_ticket"] . "&action=delete'> Supprimer </a> </td>";
@@ -207,7 +207,7 @@ session_start();
 
             <label for="titre_support-edit">Titre:</label>
             <input type="text" name="titre_support-edit" id="titre_support-edit" placeholder="Titre"
-                   value="<?php echo isset($ticket_to_edit) ? $ticket_to_edit["titre_support"] : "" ?>"> <!-- si ticket to edit est defini il affiche ticket to edit avec la valeur titre_support de la bdd sinon rien () -->
+                   value="<?php echo isset($ticket_to_edit) ? $ticket_to_edit["titre_support"] : "" ?>"> <!-- si ticket to edit est defini il affiche ticket to edit avec la valeur titre_support de la bdd sinon rien == "" -->
 
             <label for="email_support-edit">Email:</label>
             <input type="text" name="email_support-edit" id="email_support-edit" placeholder="Email"

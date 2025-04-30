@@ -1,5 +1,7 @@
 <?php
 
+// code du cours
+
 require_once("connexion.php"); // me permet de récupérer ma connexion
 
 if(isset($_POST['submit'])) { // si le formulaire de creation est soumis

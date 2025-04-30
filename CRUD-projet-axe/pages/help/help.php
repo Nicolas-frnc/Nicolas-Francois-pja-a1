@@ -1,5 +1,7 @@
 <?php
 
+// pas grand chose est utile mais c'est pour que le form s'envoie bien
+
 require_once("../includes/connexion.php"); // me permet de récupérer ma connexion
 
 if(isset($_POST['submit'])) { // si le formulaire de creation est soumis

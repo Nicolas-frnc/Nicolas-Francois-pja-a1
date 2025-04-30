@@ -6,7 +6,7 @@ class Dbh {
         try {
             $username = "root";
             $password = "root";
-            $dbh = new PDO('mysql:host=localhost;dbname=musicard', $username, $password );
+            $dbh = new PDO('mysql:host=localhost;dbname=musicard', $username, $password ); // connexion a la bdd
             return $dbh;
 
 

@@ -8,7 +8,7 @@ class Login extends Dbh{
 
         if(!$stmt->execute(array($uid, $uid))){ // https://youtu.be/BaEm2Qv14oU?t=3546
             $stmt = null;
-            header("location: ../login.php?error=stmtfailed");
+            header("location: ../login.php?error=stmtfailed"); // redirection avec les erreurs
             exit();
         }
 
@@ -30,7 +30,7 @@ class Login extends Dbh{
 
         }
         elseif ($checkPdw == true){
-            $stmt = $this->connect()->prepare("SELECT * FROM users WHERE usersUid = ? OR usersEmail = ? AND usersPwd = ?");
+            $stmt = $this->connect()->prepare("SELECT * FROM users WHERE usersUid = ? OR usersEmail = ? AND usersPwd = ?"); // preparation de la requete
 
 
             if (!$stmt->execute(array($uid, $uid, $pwdHash[0]['usersPwd']))) {
@@ -43,7 +43,7 @@ class Login extends Dbh{
 
             $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
             session_start();
-            $_SESSION["userid"] = $user[0]["usersId"];
+            $_SESSION["userid"] = $user[0]["usersId"]; // recuperation de l'id de l'utilisateur
             $_SESSION["useruid"] = $user[0]["usersUid"];
         }
 
