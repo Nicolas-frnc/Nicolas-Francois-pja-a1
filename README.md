@@ -1,4 +1,7 @@
 # Nicolas-Francois-backend
+> [!NOTE]  
+> Pour le commit du 02/05 jai ajouté des commentaires pour plus de detail et le fichier de la BDD pour le login / register + crud
+
 
 ### Inscription et connexion
 Grace a ce tuto \+ le cours
