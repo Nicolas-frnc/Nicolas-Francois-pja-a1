@@ -20,7 +20,7 @@ class LoginContr extends login {
 
     }
 
-    private function emptyInput(){
+    private function emptyInput(){ // regarde si un champs est vide et si c'est le cas retourne false
         $result;
         if(empty($this->uid) || empty($this->pwd)) {
             $result = false;

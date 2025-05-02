@@ -5,6 +5,8 @@ Grace a ce tuto \+ le cours
 
 https://www.youtube.com/watch?v=BaEm2Qv14oU
 
+### Le Login
+le login/register est dans le dossier CRUD aussi, les fichier sont dans /pages/
 
 ### Le CRUD
 

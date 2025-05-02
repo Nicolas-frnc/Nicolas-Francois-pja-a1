@@ -1,5 +1,7 @@
 <?php
 
+// meme code pour la librairei mais dadapter au formulaire de support / gestion des tickets
+
 require_once("../includes/connexion.php"); // me permet de récupérer ma connexion
 
 if(isset($_POST['submit'])) { // si le formulaire de creation est soumis

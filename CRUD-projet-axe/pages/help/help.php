@@ -68,7 +68,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'modify') { // si l'action est m
     }
 }
 
-if(isset($_POST['submit-edit'])) {
+if(isset($_POST['submit-edit'])) { // si le formulaire de modification est soumis
     $id_ticket = $_POST['id_ticket'];
     $titre_support = $_POST['titre_support-edit'];
     $email_support = $_POST['email_support-edit'];
@@ -154,7 +154,7 @@ session_start();
                     <?php
                     if (isset($_SESSION["useruid"])) {
 
-                        echo "<li>✨ Mon compte (" . $_SESSION["useruid"] . ")</li>";
+                        echo "<li>✨ Mon compte (" . $_SESSION["useruid"] . ")</li>"; // affiche le nom de l'utilisateur
 
 
                     } else {

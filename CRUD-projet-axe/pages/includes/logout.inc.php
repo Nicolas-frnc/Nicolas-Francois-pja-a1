@@ -2,7 +2,7 @@
 
 session_start();
 session_unset();
-session_destroy();
+session_destroy(); // logout
 
-header("location: ../login.php");
+header("location: ../login.php"); // redirection vers la page de connexion
 
